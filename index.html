@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ascitech International – School Staff</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            padding: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        input, button {
+            padding: 10px;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        button {
+            cursor: pointer;
+        }
+        #result {
+            margin-top: 20px;
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Ascitech International – Staff Information</h1>
+<p>Enter the teacher’s name (example: <b>narcis</b>, <b>patrick</b>, <b>bitota</b>)</p>
+
+<input type="text" id="teacherInput" placeholder="Enter teacher name">
+<br>
+<button onclick="showInfo()">Search</button>
+
+<div id="result"></div>
+
+<script>
+const teachers = {
+    narcis: "Mr Narcis Mawazo is an English and ECC teacher at Ascitech International. He teaches English from grade 7 to grade 8. He is strict about homework and classroom rules.",
+
+    patrick: "Mr Patrick Kabao is a French teacher at Ascitech International. He wears glasses, has a good sense of humor, but can be strict and merciless if provoked.",
+
+    fiston: "Mr Fiston Matungila is a history teacher at Ascitech International. He is kind and jokes a lot but can be severe if not respected.",
+
+    anne_marie: "Ms Anne-Marie Itindi is a statistics teacher at Ascitech International. She is kind, cares about students, and strictly enforces rules.",
+
+    edgard: "Mr Edgard Ndungidi is an SVT teacher at Ascitech International. He cares about students' behavior and academic performance.",
+
+    jaques: "Mr Jaques Kipoyi is a coding teacher at Ascitech International. He is funny and joyful but very severe when disrespected.",
+
+    jonathan: "Mr Jonathan is a civics and sports teacher at Ascitech International. He is strong, knowledgeable about sports, and strict with disturbers.",
+
+    moses: "Mr Moses is an ICDL teacher at Ascitech International. He is very strict with students who break rules but respectful to disciplined students.",
+
+    ideal: "Mr Ideal is an art teacher at Ascitech International. He is talented and focused on students' behavior.",
+
+    dieumerci: "Mr Dieumerci is an algebra and arithmetic teacher at Ascitech International. He is funny but strict about notes and discipline.",
+
+    benedicte: "Mr Benedicte is a geography teacher at Ascitech International. He is mostly strict but can be funny at times.",
+
+    bitota: "Mr Yves Bitota is a physics and technology teacher at Ascitech International. He prefers to be called Professor Bitota and is strict with a bad temper.",
+
+    ackenathan: "Mr Ackenathan is an English teacher at Ascitech International. He teaches grades 10 to 12 and is very strict about studying.",
+
+    cellcius: "Mr Cellcius is a math teacher at Ascitech International. He is tall, has short hair, and wears glasses.",
+
+    obama: "Miss Obama is a French teacher at Ascitech International. She teaches grades 9 to 10 and is kind but strict.",
+
+    lucien: "Mr Lucien is a French teacher at Ascitech International. He teaches grades 11 to 12. He is bald, has a beard, and wears glasses.",
+
+    benis: "Mr Benis is a young electronics teacher at Ascitech International. He is tall, has no hair, and teaches all electronics classes.",
+
+    eugide: "Mr Eugide Bazunga is an English teacher in grade 8 at Ascitech International. He is short and has short dark hair.",
+
+    linda: "Ms Linda is an SVT teacher in grades 7 and 8 at Ascitech International. She is short and has long dark hair.",
+
+    erick: "Mr Erick Bongonta is a math teacher in grades 8, 9 scientific, and 9 electronic. He is tall with very short hair.",
+
+    bienvenu: "Mr Bienvenu Yimbi is a French teacher in grade 8 and literary classes. He has very short dark hair.",
+
+    ygem: "Mr Ygem is a geometry teacher in grade 8 at Ascitech International. He is tall and has very short hair.",
+
+    orman: "Mr Orman Neville is a geography and history teacher in grades 7 and 8. He has short dark hair and sometimes wears glasses."
+};
+
+function showInfo() {
+    const input = document.getElementById("teacherInput").value.toLowerCase().trim();
+    const result = document.getElementById("result");
+
+    if (teachers[input]) {
+        result.textContent = teachers[input];
+    } else {
+        result.textContent = "Teacher not found. Please check the name.";
+    }
+}
+</script>
+
+</body>
+</html>
